@@ -1,0 +1,9 @@
+/Users/pyamap/.rbenv/versions/2.2.2/bin/ruby -r ./siteconf20150715-36058-f357fc.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install

@@ -1,0 +1,46 @@
+<div id ="main_contents">
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+    <div class="field">
+      <%= f.label :ユーザー名 %><br />
+      <%= f.text_field :username, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Eメール %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :新規パスワード %> <i>(変更しない場合は空欄可)</i><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :確認用パスワード %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :現在のパスワード %> <i>(パスワード変更に必要です)</i><br />
+      <%= f.password_field :current_password, autocomplete: "off" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "更新", :class =>"button"%>
+    </div>
+
+  <p><%= button_to "アカウントを削除", registration_path(resource_name), data: { confirm: "本当に削除してもよいですか?" }, method: :delete, :class => "button_delete" %></p>
+
+  <%= link_to "戻る", :back %>
+  <% end %>
+
+</div>

@@ -1,0 +1,47 @@
+<div id="header">	
+
+	<h1><%= menu_link_to "Four Fortunes", root_path %></h1>
+
+	<div id="menubar">
+		<ul id="dropmenu">
+			<li><%= menu_link_to "作品集", "#" %></li> 
+			<li><%= menu_link_to "オーナー", "#" %></li> 
+			<li><%= menu_link_to "お問い合わせ", "#"%></li> 
+			<li><%= menu_link_to "活動報告", "#" %></li>
+			<li><%= menu_link_to "会員名簿", "members" %></li>
+
+			<% if user_signed_in? %>
+			
+			  <li><a href="#"><strong><%= current_user.username %></strong></a>
+				　<ul>
+					<li><%= link_to "プロフィール変更", edit_user_registration_path %></li>
+					<li><%= button_to "ログアウト", destroy_user_session_path, :method => :delete %></li>
+				　</ul>
+			　</li>
+
+			<% else %>
+			　<li><a href="#">ログイン</a>
+				　<ul>
+					<%= link_to "サインイン", new_user_registration_path %> |
+					<%= link_to "ログイン", new_user_session_path %>
+				　</ul>
+			　<li>
+			<% end %>
+	<!--
+			<p class= "notice"><%= notice %> </p>
+			<p class= "alert"><%= alert %></p>
+		-->
+
+
+<!-- deviseによりログイン認証画面を実装中のため、一時コメントアウト。下記にRelationのあるモデルは"Member"
+			<li><a href="#">ログイン</a>
+				<ul>
+					<li><%= menu_link_to "会員登録", "#" %></li> 
+					<li><%= menu_link_to "ログイン", login_path %></li> 
+				</ul>
+			</li>
+		-->
+			
+		</ul>
+	</div>
+</div>

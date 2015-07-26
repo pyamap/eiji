@@ -1,0 +1,100 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#main_contents{
+	background-image: url("backimage1.jpg");
+	height:700px;
+	background-color:rgba(255,255,255,0.99);
+}
+
+h2{
+	text-align:center;
+}
+
+.new_user{
+	text-align:center;
+	margin:auto;
+	width:650px;
+	background-color:#F5F5F5;
+	background-color:rgba(255,255,255,0.8);
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.edit_user{
+	text-align:center;
+	margin:auto;
+	width:650px;
+	background-color:#F5F5F5;
+	background-color:rgba(255,255,255,0.8);
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+p{
+	margin:0;
+}
+
+.field{
+	font-size:20px;
+}
+
+input.button{
+	margin:20px;
+	height:35px;
+    font-size:20px;
+    text-decoration:none;
+    color:white;
+    border:1px solid #333;
+    background-color:#1ca2ef;
+    border-radius:10px;
+    text-shadow:1px 1px #555
+}
+
+input.button:hover{
+		background-color: #fff;
+		border-color: #1ca2ef;
+		color: #1ca2ef;
+}
+
+
+input.button_delete{
+	margin:20px;
+	height:35px;
+    font-size:18px;
+    text-decoration:none;
+    color:white;
+    border:1px solid #333;
+    background-color:#333;
+    border-radius:10px;
+    text-shadow:1px 1px #555
+}
+
+input.button_delete:hover{
+	background-color: #fff;
+	border-color:#333;
+	color: #333;
+}
+
+input{
+	height:25px;
+	width:220px;
+	border-radius: 10px;
+	font-size:100%;
+}
+
+/*ログイン画面のCSSここから*/
+
+input#user_remember_me{
+	width:20px;
+}
+
+
+
+
+/*ログイン画面のCSSここまで*/
+	
